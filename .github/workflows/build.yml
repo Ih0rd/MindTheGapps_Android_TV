@@ -26,12 +26,12 @@ jobs:
     - name: Build GApps for Android TV
       run: |
         cd vendor_gapps_tv
-        make gapps_tv_arm64 -j$(nproc)
+        make gapps_tv_arm -j$(nproc)
 
     - name: Creating Release GApps for Android TV
       uses: softprops/action-gh-release@v1
       with:
        files: |
-        vendor_gapps_tv/out/MindTheGapps-13.0.0-arm64-ATV-full-*.zip
+        vendor_gapps_tv/out/MindTheGapps-11.0.0-arm64-ATV-full-*.zip
        name: GApps For TV
-       tag_name: ATV-13
+       tag_name: ATV-11
